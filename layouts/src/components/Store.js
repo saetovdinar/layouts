@@ -1,5 +1,7 @@
 import IconSwitch from "./IconSwitch";
-import CardsView  from "./CardsView ";
+import CardsView  from "./CardsView";
+import ListView  from "./ListView";
+
 import { useState } from "react";
 
 function Store(props) {
@@ -12,7 +14,10 @@ function Store(props) {
         icon === 'view_list'? setIcon('view_module') :  setIcon('view_list')
        
       }}/>
-      <CardsView  />
+      {
+        icon === 'view_module' ? <ListView cards={products}  /> : <CardsView cards={products}  />
+      }
+
     </>
   );
 }

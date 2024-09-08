@@ -1,15 +1,15 @@
-import ShopItem from "./ShopItem";
+import ShopCard from "./ShopCard";
 
-function ListView (props) {
+function CardsView (props) {
     const {cards} = props;
    
   
     return (
-      <div className="cards_list">
+      <div className="cards_module">
         {
             cards.map(function (item) {
                 return (
-                    <ShopItem project={item}/>
+                    <ShopCard project={item}/>
                 )
             })
         } 
@@ -17,5 +17,5 @@ function ListView (props) {
     );
   }
   
-  export default ListView ;
+  export default CardsView ;
   
